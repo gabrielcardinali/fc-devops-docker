@@ -1,4 +1,4 @@
-FROM node:15
+FROM node
 
 WORKDIR /usr/src/app
 
@@ -9,6 +9,6 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-EXPOSE 3000
+EXPOSE 8080
 
 # CMD ["node","index.js"]
